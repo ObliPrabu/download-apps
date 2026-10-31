@@ -24,3 +24,4 @@ code{background:var(--card);border:1px solid var(--border);border-radius:6px;pad
 ul{padding-left:20px}
 footer{margin:48px 0 32px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--border);padding-top:16px}
 footer a{color:var(--muted)}
+ol{margin:8px 0;padding-left:22px}

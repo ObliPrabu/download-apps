@@ -10,7 +10,15 @@
 <div class="card"><h3>Android</h3><span class="tag">Coming soon</span><p>Not on Google Play yet.</p></div>
 <div class="card"><h3>iPhone &amp; iPad</h3><span class="tag">Coming soon</span><p>Not on the App Store yet.</p></div>
 </div>
-<div class="note"><strong>Opening the Mac app the first time.</strong> This build is not notarized by Apple yet, so macOS shows a warning that it cannot check it for malicious software. The app is not damaged. To open it: drag PlanSaver to Applications and try to open it once, then click <strong>Done</strong>. Go to System Settings &rarr; Privacy &amp; Security, scroll to the Security section, click <strong>Open Anyway</strong> next to PlanSaver, and enter your password. On older macOS versions, right-click the app and choose <strong>Open</strong> instead. If you prefer Terminal: <code>xattr -dr com.apple.quarantine /Applications/PlanSaver.app</code>. To check your download, its SHA-256 is <code>056046989402647348782111ef7f18d8f8f15515584f472680758c8f92fc8f39</code>.</div>
+<div class="note"><strong>Opening the Mac app the first time.</strong> macOS will show a warning like <em>&ldquo;Apple could not verify &lsquo;PlanSaver&rsquo; is free of malware that may harm your Mac or compromise your privacy.&rdquo;</em> That is because this app is not notarized by Apple yet. It does not mean the app is damaged. To open it anyway:
+<ol>
+<li>Drag PlanSaver to your Applications folder and open it.</li>
+<li>When the warning appears, click <strong>Done</strong>.</li>
+<li>Open <strong>System Settings</strong> and go to <strong>Privacy &amp; Security</strong>.</li>
+<li>Scroll down to the <strong>Security</strong> section. You will see a message that PlanSaver was blocked.</li>
+<li>Click <strong>Open Anyway</strong>, enter your Mac password, then click <strong>Open</strong>.</li>
+</ol>
+You only have to do this once. Prefer Terminal? Run <code>xattr -dr com.apple.quarantine /Applications/PlanSaver.app</code>. To check your download, its SHA-256 is <code>056046989402647348782111ef7f18d8f8f15515584f472680758c8f92fc8f39</code>.</div>
 <h2>What it does</h2>
 <ul>
 <li>Compares US cell-phone plans for your lines, data and budget.</li>
