@@ -1,8 +1,7 @@
 (function () {
   var map = { ig: 'instagram', insta: 'instagram', instagram: 'instagram', yt: 'youtube', youtube: 'youtube', tt: 'tiktok', tiktok: 'tiktok', friends: 'friends' };
   var names = { instagram: 'Instagram', youtube: 'YouTube', tiktok: 'TikTok', friends: 'a friend' };
-  var refs = { instagram: 'utm_source%3Dinstagram%26utm_medium%3Dsocial%26utm_campaign%3Dlink_in_bio',
-    youtube: 'utm_source%3Dyoutube%26utm_medium%3Dsocial%26utm_campaign%3Dlink_in_bio' };
+  var refs = { instagram: 'utm_source%3Dinstagram%26utm_medium%3Dsocial%26utm_campaign%3Dlink_in_bio' };
   var src = null;
   try {
     var q = new URLSearchParams(location.search);
