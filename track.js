@@ -1,6 +1,8 @@
 (function () {
   var map = { ig: 'instagram', insta: 'instagram', instagram: 'instagram', yt: 'youtube', youtube: 'youtube', tt: 'tiktok', tiktok: 'tiktok', friends: 'friends' };
   var names = { instagram: 'Instagram', youtube: 'YouTube', tiktok: 'TikTok', friends: 'a friend' };
+  var refs = { instagram: 'utm_source%3Dinstagram%26utm_medium%3Dsocial%26utm_campaign%3Dlink_in_bio',
+    youtube: 'utm_source%3Dyoutube%26utm_medium%3Dsocial%26utm_campaign%3Dlink_in_bio' };
   var src = null;
   try {
     var q = new URLSearchParams(location.search);
@@ -23,7 +25,7 @@
   var links = document.querySelectorAll('a[href*="play.google.com"]');
   for (var i = 0; i < links.length; i++) {
     var a = links[i];
-    if (a.href.indexOf('referrer=') === -1) a.href += '&referrer=utm_source%3D' + src;
+    if (a.href.indexOf('referrer=') === -1) a.href += '&referrer=' + (refs[src] || ('utm_source%3D' + src));
   }
   if (links.length) {
     var card = links[0].parentNode;
